@@ -10,10 +10,13 @@ plugins:
   - jekyll-feed
 
 minima:
-  skin: classic
+  skin: auto
+  date_format: "%Y-%m-%d"
   social_links:
     - { platform: github, user_url: "https://github.com/pxq-u1u1" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/xiuqi-pu-085346396/" }
+
+show_excerpts: true
 
 header_pages:
   - index.md
