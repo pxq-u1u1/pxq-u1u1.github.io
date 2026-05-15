@@ -2,7 +2,8 @@
 layout: post
 title: "🇩🇪 交换5个月 | 请再自信一点吧！"
 date: 2026-05-14
-categories: [生活记录, 交换]
+categories: [碎碎念]
+tags: [交换, 德国, 成长]
 ---
 
 来德国好像是很早以前就注定的事。
