@@ -1,0 +1,20 @@
+title: pxq-u1u1's Blog
+author: pxq-u1u1
+description: 学习笔记 · 项目展示 · 生活记录
+baseurl: ""
+url: "https://pxq-u1u1.github.io"
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+
+minima:
+  skin: classic
+  social_links:
+    - { platform: github, user_url: "https://github.com/pxq-u1u1" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/xiuqi-pu-085346396/" }
+
+header_pages:
+  - index.md
+  - about.md
