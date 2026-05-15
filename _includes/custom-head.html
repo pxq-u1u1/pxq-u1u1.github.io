@@ -1,0 +1,351 @@
+<style>
+/* === Colors === */
+:root {
+  --primary: #2d7d46;
+  --accent: #4a9eff;
+  --text: #2c3e50;
+  --light-bg: #f8faf9;
+  --card-bg: #ffffff;
+  --border: #e8ecef;
+}
+
+/* === Hide RSS === */
+.rss-subscribe, .feed-subscribe, a[href*="feed.xml"] {
+  display: none !important;
+}
+
+/* === Global === */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+  color: var(--text);
+  line-height: 1.8;
+  background: var(--light-bg);
+}
+
+/* === Header === */
+.site-header {
+  background: linear-gradient(135deg, #1a3c2a 0%, #2d7d46 100%);
+  border-bottom: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  padding: 0.9rem 0;
+}
+
+.site-header .wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.site-title, .site-title:visited {
+  color: #fff !important;
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.3px;
+}
+
+.site-title:hover {
+  color: rgba(255,255,255,0.85) !important;
+  text-decoration: none;
+}
+
+.site-nav {
+  background: transparent;
+}
+
+.site-nav .page-link {
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.site-nav .page-link:hover {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.site-nav .menu-icon > svg path {
+  fill: #fff;
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    background: #1a3c2a;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+}
+
+/* === Main content === */
+.page-content {
+  padding: 2.5rem 0;
+}
+
+.wrapper {
+  max-width: 800px;
+}
+
+/* === Post list cards === */
+.post-list {
+  margin-left: 0;
+  list-style: none;
+}
+
+.post-list > li {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  transition: box-shadow 0.2s;
+}
+
+.post-list > li:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.post-list .post-meta {
+  color: #999;
+  font-size: 0.82rem;
+  margin-bottom: 0.3rem;
+}
+
+.post-link {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.post-link:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* === Post page === */
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.post-content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  color: var(--text);
+}
+
+.post-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #555;
+}
+
+.post-content a {
+  color: var(--accent);
+}
+
+.post-content blockquote {
+  border-left: 3px solid var(--primary);
+  background: #f0faf3;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+  color: #555;
+}
+
+.post-content img {
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.post-content code {
+  background: #f0f0f0;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.post-content pre {
+  border-radius: 8px;
+  background: #1e1e2e;
+  padding: 1rem 1.2rem;
+}
+
+/* === Category grid === */
+.recent-header {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary);
+}
+
+.category-grid {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cat-card {
+  flex: 1;
+  min-width: 140px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.cat-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.cat-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.cat-name {
+  display: block;
+  font-weight: 700;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.cat-desc {
+  display: block;
+  color: #999;
+  font-size: 0.78rem;
+  margin-top: 0.2rem;
+}
+
+/* === Category page === */
+.category-header {
+  margin-bottom: 2rem;
+}
+
+.category-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.category-desc {
+  color: #888;
+  font-size: 1rem;
+}
+
+/* === Tag pills === */
+.post-tags {
+  margin-top: 0.5rem;
+}
+
+.tag-pill {
+  display: inline-block;
+  background: #e8f5ec;
+  color: var(--primary);
+  padding: 0.1em 0.6em;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  margin-right: 0.4rem;
+}
+
+/* === Empty category === */
+.empty-category {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+/* === Footer === */
+.site-footer {
+  background: #1a1f24 !important;
+  border-top: 4px solid var(--primary);
+  padding: 2.5rem 0;
+  color: #aaa;
+  font-size: 0.85rem;
+  margin-top: 3rem;
+}
+
+.site-footer .wrapper {
+  text-align: center;
+}
+
+.site-footer .footer-col {
+  float: none;
+  width: 100%;
+  text-align: center;
+}
+
+.site-footer .footer-heading {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.site-footer .social-media-list {
+  margin: 0.8rem 0;
+  line-height: 1;
+}
+
+.site-footer .social-media-list li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.site-footer .social-media-list a {
+  color: #aaa;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.site-footer .social-media-list a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-footer .username {
+  display: inline;
+}
+
+.site-footer .footer-credit {
+  margin-top: 1.2rem;
+  color: #666;
+  font-size: 0.75rem;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .post-list > li {
+    padding: 1.2rem 1rem;
+    border-radius: 8px;
+  }
+  .post-title {
+    font-size: 1.5rem;
+  }
+  .category-grid {
+    flex-direction: column;
+  }
+}
+</style>
