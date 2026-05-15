@@ -19,24 +19,61 @@ body {
   background: $light-bg;
 }
 
+// === Hide RSS ===
+.rss-subscribe, .feed-subscribe, a[href*="feed.xml"] {
+  display: none !important;
+}
+
+// === Header ===
 .site-header {
-  background: $card-bg;
-  border-bottom: 1px solid $border;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  background: linear-gradient(135deg, #1a3c2a 0%, #2d7d46 100%);
+  border-bottom: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  padding: 0.9rem 0;
+
+  .wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .site-title, .site-title:visited {
-  color: $primary;
-  font-weight: 700;
-}
-
-.site-nav .page-link {
-  color: #666;
-  font-weight: 500;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.3px;
 
   &:hover {
-    color: $primary;
+    color: rgba(255,255,255,0.85);
     text-decoration: none;
+  }
+}
+
+.site-nav {
+  background: transparent;
+
+  .page-link {
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .menu-icon > svg path {
+    fill: #fff;
+  }
+
+  @media (max-width: 600px) {
+    background: #1a3c2a;
+    border-radius: 8px;
+    padding: 0.5rem;
   }
 }
 
@@ -223,12 +260,76 @@ body {
   font-size: 1.1rem;
 }
 
-// Footer
+// === Footer ===
 .site-footer {
-  border-top: 1px solid $border;
-  padding: 2rem 0;
-  color: #999;
+  background: #1a1f24;
+  border-top: 4px solid $primary;
+  padding: 2.5rem 0;
+  color: #aaa;
   font-size: 0.85rem;
+  margin-top: 3rem;
+
+  .wrapper {
+    text-align: center;
+  }
+
+  .footer-col {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-heading {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-desc {
+    color: #888;
+    margin-bottom: 1rem;
+    font-size: 0.82rem;
+  }
+
+  .social-media-list {
+    margin: 0.8rem 0;
+    line-height: 1;
+
+    li {
+      display: inline-block;
+      margin: 0 0.5rem;
+    }
+
+    a {
+      color: #aaa;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .username {
+        display: inline;
+      }
+    }
+  }
+
+  .footer-credit {
+    margin-top: 1.2rem;
+    color: #666;
+    font-size: 0.75rem;
+
+    a {
+      color: #888;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
