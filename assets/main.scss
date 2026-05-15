@@ -128,6 +128,102 @@ body {
   }
 }
 
+// Category grid on home page
+.recent-header {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $text;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid $primary;
+}
+
+.category-grid {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cat-card {
+  flex: 1;
+  min-width: 140px;
+  background: $card-bg;
+  border: 1px solid $border;
+  border-radius: 10px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  transition: box-shadow 0.2s, transform 0.15s;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+}
+
+.cat-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.cat-name {
+  display: block;
+  font-weight: 700;
+  color: $text;
+  font-size: 0.95rem;
+}
+
+.cat-desc {
+  display: block;
+  color: #999;
+  font-size: 0.78rem;
+  margin-top: 0.2rem;
+}
+
+// Category page header
+.category-header {
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: $text;
+  }
+}
+
+.category-desc {
+  color: #888;
+  font-size: 1rem;
+}
+
+// Tag pills
+.post-tags {
+  margin-top: 0.5rem;
+}
+
+.tag-pill {
+  display: inline-block;
+  background: #e8f5ec;
+  color: $primary;
+  padding: 0.1em 0.6em;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  margin-right: 0.4rem;
+}
+
+// Empty category
+.empty-category {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+// Footer
 .site-footer {
   border-top: 1px solid $border;
   padding: 2rem 0;
@@ -141,5 +237,8 @@ body {
   }
   .post-title {
     font-size: 1.5rem;
+  }
+  .category-grid {
+    flex-direction: column;
   }
 }
